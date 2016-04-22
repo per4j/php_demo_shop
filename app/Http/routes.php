@@ -33,6 +33,7 @@ Route::get('/product/{product_id}', 'View\BookController@toPdtContent');
 
 Route::group(['prefix' => 'service'], function() {
   Route::get('category/parent_id/{parent_id}', 'Service\BookController@getCategoryByParentId');
+  Route::get('cart/add/{product_id}', 'Service\CartController@addCart');
 });
 
 /*
